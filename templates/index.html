@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fruit Detector</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>FreschCheckAI</h1>
+            <p>Sube una imagen para detectar el estado de tu fruta.</p>
+        </header>
+
+        <main>
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Arrastra tu imagen aquí o <span>haz clic para subir</span></p>
+                </div>
+                <img id="previewImage" src="" alt="Vista previa" hidden>
+                <button id="removeBtn" class="icon-btn" hidden><i class="fas fa-times"></i></button>
+            </div>
+
+            <button id="analyzeBtn" class="cta-btn" disabled>Analizar Fruta</button>
+
+            <div id="resultCard" class="result-card hidden">
+                <div class="loader hidden" id="loader"></div>
+                <div id="resultContent" class="hidden">
+                    <h2>Resultado</h2>
+                    <p class="prediction" id="predictionText">--</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by FreschCheckAI</p>
+        </footer>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
